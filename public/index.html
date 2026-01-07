@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Om Sai Family Restaurant - Billing</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>OM SAI FAMILY RESTAURANT</h1>
+    <p>Veg & Non-Veg | Free Wi-Fi</p>
+    <small>Bypass Road, Samudrapur | Contact: 9168386929</small>
+  </header>
 
+  <div id="login-page">
+    <div class="login-container">
+      <div class="admin-header">Admin</div>
+      <form id="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter Username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="main-page" style="display: none;">
+    <nav>
+      <button id="menu-btn">Menu Management</button>
+      <button id="billing-btn">Billing</button>
+      <button id="history-btn">Billing History</button>
+    </nav>
+
+    <section id="menu-section">
+      <h2>Menu Management</h2>
+      <form id="add-menu-form">
+        <label for="item-name">Item Name:</label>
+        <input type="text" id="item-name" required>
+        <label for="item-price">Price:</label>
+        <input type="number" step="0.01" id="item-price" required>
+        <button type="submit">Add Item</button>
+      </form>
+      <ul id="menu-list"></ul>
+    </section>
+
+    <section id="billing-section" style="display: none;">
+      <h2>Billing</h2>
+      <button id="add-item-btn">Add Item to Bill</button>
+      <div id="selected-items"></div>
+      <p>Total: Rs. <span id="total">0.00</span></p>
+      <form id="billing-form">
+        <label for="customer-phone">Customer Phone:</label>
+        <input type="text" id="customer-phone" required>
+        <label for="whatsapp-number">WhatsApp Number:</label>
+        <input type="text" id="whatsapp-number" required>
+        <button type="submit">Generate Bill</button>
+      </form>
+    </section>
+
+    <section id="history-section" style="display: none;">
+      <h2>Billing History</h2>
+      <ul id="bills-list"></ul>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Om Sai Family Restaurant. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
