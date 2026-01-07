@@ -126,4 +126,9 @@ if (process.env.NODE_ENV !== 'production') {
   app.listen(port, () => console.log(`Server running on port ${port}`));
 }
 
+
 module.exports = app;
+// server.js mein ye add karein
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
