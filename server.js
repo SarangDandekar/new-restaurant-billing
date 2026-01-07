@@ -10,6 +10,10 @@ const port = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
 app.use(express.static('public'));
+// Ye line batati hai ki main page par index.html dikhao
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // LOGIN
 app.post('/login', async (req, res) => {
@@ -129,3 +133,4 @@ if (process.env.NODE_ENV !== 'production') {
 
 module.exports = app;
  
+
