@@ -1,1 +1,93 @@
 
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0; padding: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333; min-height: 100vh;
+  display: flex; flex-direction: column;
+}
+
+header {
+  background: linear-gradient(to right, #d32f2f, #fbc02d);
+  color: white; text-align: center;
+  padding: 20px 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header h1 { margin: 0; font-size: 2rem; }
+
+#login-page {
+  display: flex; justify-content: center;
+  align-items: center; flex: 1;
+}
+
+.login-container {
+  background: white; padding: 30px;
+  border-radius: 12px; width: 320px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.admin-header {
+  color: #4a90e2; text-align: center;
+  font-size: 24px; font-weight: bold;
+  margin-bottom: 20px; border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+input, select {
+  width: 100%; padding: 12px; margin-bottom: 15px;
+  border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box;
+}
+
+button {
+  width: 100%; padding: 12px; background: #4a90e2;
+  color: white; border: none; border-radius: 6px;
+  font-weight: bold; cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover { opacity: 0.9; }
+
+#main-page { padding: 20px; }
+nav { text-align: center; margin-bottom: 20px; }
+nav button { width: auto; margin: 5px; display: inline-block; }
+
+#menu-section, #billing-section, #history-section {
+  background: white; padding: 20px;
+  border-radius: 10px; max-width: 800px; margin: 0 auto 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* LIST STYLING FOR ALIGNMENT */
+#menu-list, #bills-list {
+  padding: 0; list-style: none;
+}
+
+#menu-list li, #bills-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fdfdfd;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+
+.item {
+  display: flex; justify-content: space-between;
+  padding: 10px; border-bottom: 1px solid #eee;
+}
+
+.btn-delete {
+  background: #d32f2f !important;
+  width: auto !important;
+  padding: 6px 15px !important;
+  font-size: 14px;
+}
+
+.history-actions {
+  display: flex;
+  gap: 8px;
+}
+
+footer { background: #222; color: white; text-align: center; padding: 10px; margin-top: auto; }
